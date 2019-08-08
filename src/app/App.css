@@ -34,13 +34,14 @@ figcaption {
   font-style: normal;
   text-decoration: none;
   border: none;
-  font-family: "Microsoft Yahei", sans-serif;
+  font-family: "楷体", sans-serif;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
 }
 
 .App {
   text-align: center;
+  font-size: 20px;
 }
 .App .welcome {
   text-align: left;
