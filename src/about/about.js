@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import { Table, Radio } from 'antd';
+import { Table, Radio, Input, Button } from 'antd';
 
 function about(props) {
   const columns = [
@@ -51,12 +51,37 @@ function about(props) {
       CoName: '百度',
       CoAddress: 'New York No. 3 Lake Park#',
       bind: false
+    },
+    {
+      key: '4',
+      cityName: 'John Brown1',
+      CoName: '阿里巴巴1',
+      CoAddress: 'New York No. 1 Lake Park$',
+      bind: false
+    },
+    {
+      key: '5',
+      cityName: 'Jim Green1',
+      CoName: '腾讯1',
+      CoAddress: 'New York No. 2 Lake Park%',
+      bind: false
+    },
+    {
+      key: '6',
+      cityName: 'Joe Black1',
+      CoName: '百度1',
+      CoAddress: 'New York No. 3 Lake Park……',
+      bind: false
     }
   ]
   return (
     <div className="about">
       hello {props.name}!
       <Table columns={columns} dataSource={data} />
+      <div className="commit">
+        <Input placeholder="Remember to us"/>
+      </div>
+      <Button type="primary">提交</Button>
     </div>
   );
 }

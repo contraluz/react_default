@@ -3,6 +3,7 @@ import './App.css';
 import 'antd/dist/antd.css'
 
 import About from '../about/about'
+import Report from '../report/report'
 // function App() {
 //   return (
 //     <div className="App">
@@ -29,10 +30,10 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
+      <Report university="浙江大学"></Report>
       <header className="App-header">
-        <h1>河南微信预警信息推送</h1>
+        <h1>台风预警信息推送</h1>
         <p className="welcome">您好，欢迎进入我们的系统！</p>
-        
       </header>
       <About name="contraluz"/>
     </div>
