@@ -7,7 +7,8 @@ class report extends React.Component {
         this.state = {
             university: props.university,
             id: 0,
-            sessionId: 'HF93DK38DUe8k329dk3d'
+            sessionId: 'HF93DK38DUe8k329dk3d',
+            timeNow: new Date().toLocaleTimeString()
         }
         this.handleClickUniversity = this.handleClickUniversity.bind(this)
     }
@@ -23,11 +24,24 @@ class report extends React.Component {
         })
     }
     handleClickId() {
-        let id = this.state.id;
-        id++;
-        this.setState({
-            id: id
-        })
+        // let id = this.state.id;
+        // id++;
+        // this.setState({
+        //     id: id
+        // })
+        this.setState(state => ({
+            id: ++state.id
+        }))
+    }
+    componentDidMount() {
+        this.timer = setInterval(() => {
+            this.setState({
+                timeNow: new Date().toLocaleTimeString()
+            })
+        }, 1000);
+    }
+    componentWillUnmount() {
+        clearInterval(this.timer)
     }
     render() {
         const state = this.state
@@ -36,6 +50,7 @@ class report extends React.Component {
                 <p onClick={this.handleClickUniversity}>{state.university}</p>
                 <p>{state.sessionId}</p>
                 <p onClick={()=>this.handleClickId()}>{state.id}</p>
+                <p>{state.timeNow}</p>
             </div>
         )
     }
