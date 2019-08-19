@@ -2,3 +2,10 @@
     font-size: 0.2rem;
     columns: #242424;
 }
+.report .iBlock {
+    display: inline-block;
+}
+.report .li {
+    border: #242424 2px solid;
+    margin: 10px 30px;
+}
